@@ -1,12 +1,14 @@
-import gambar1 from "../img/list3.png"
-import gambar2 from "../img/list1.png"
+import gambar1 from "../img/list1.png"
+import gambar2 from "../img/list2.png"
+import gambar3 from "../img/list3.png"
+import gambar4 from "../img/list4.png"
 import { CiShoppingBasket } from "react-icons/ci";
+import ProductBadge from "./elements/ProductBadge";
 
 export default function Product() {
     return (
-        <div id="main-content" className="flex px-[20px] gap-4">
+        <div id="main-content" className="flex px-[20px] gap-4 overflow-scroll sm:overflow-hidden">
             <div
-                id="left"
                 className="flex flex-col w-1/2 p-2 bg-[#2B2116] rounded-[2.4vh] gap-3"
             >
                 <div className="flex w-full justify-center items-center">
@@ -16,21 +18,12 @@ export default function Product() {
                         alt=""
                     />
                 </div>
-                <div className="flex flex-col pb-3">
-                    <div className="flex flex-col text-[1.2rem] sm:text-[2rem]">
-                        <span>Indonesian Beans</span>
-                        <span className="text-[#A59B8F]">Coffee Beans</span>
-                    </div>
-                    <div className="flex justify-between items-center text-[1.2rem] sm:text-[2rem]">
-                        <span>$235.00</span>
-                        <span className="flex justify-center items-center w-[44px] h-[44px] sm:w-[54px] sm:h-[54px] bg-[#e1cf97] text-black rounded-[2vh]">
-                            <CiShoppingBasket className="text-[1.5rem] sm:text-[2rem]" />
-                        </span>
-                    </div>
-                </div>
+                <ProductBadge>
+                    <ProductBadge.description title="Rating : 4.9 ⭐" desc="Indonesian Beans" />
+                    <ProductBadge.price price="235.00" icon={<CiShoppingBasket className="text-[1.5rem] sm:text-[2rem]" />} />
+                </ProductBadge>
             </div>
             <div
-                id="right"
                 className="flex flex-col w-1/2 p-2 bg-[#2B2116] rounded-[2.4vh] gap-3"
             >
                 <div className="flex w-full justify-center items-center">
@@ -40,18 +33,40 @@ export default function Product() {
                         alt=""
                     />
                 </div>
-                <div className="flex flex-col pb-3">
-                    <div className="flex flex-col text-[1.2rem] sm:text-[2rem]">
-                        <span>Indonesian Beans</span>
-                        <span className="text-[#A59B8F]">Coffee Beans</span>
-                    </div>
-                    <div className="flex justify-between items-center text-[1.2rem] sm:text-[2rem]">
-                        <span>$85.00</span>
-                        <span className="flex justify-center items-center w-[44px] h-[44px] sm:w-[54px] sm:h-[54px] bg-[#e1cf97] text-black rounded-[2vh]">
-                            <CiShoppingBasket className="text-[1.5rem] sm:text-[2rem]" />
-                        </span>
-                    </div>
+                <ProductBadge>
+                    <ProductBadge.description title="Rating : 4.9 ⭐" desc="Indonesian Beans" />
+                    <ProductBadge.price price="235.00" icon={<CiShoppingBasket className="text-[1.5rem] sm:text-[2rem]" />} />
+                </ProductBadge>
+            </div>
+            <div
+                className="flex flex-col w-1/2 p-2 bg-[#2B2116] rounded-[2.4vh] gap-3"
+            >
+                <div className="flex w-full justify-center items-center">
+                    <img
+                        className="rounded-[2vh]"
+                        src={gambar3}
+                        alt=""
+                    />
                 </div>
+                <ProductBadge>
+                    <ProductBadge.description title="Rating : 4.9 ⭐" desc="Indonesian Beans" />
+                    <ProductBadge.price price="235.00" icon={<CiShoppingBasket className="text-[1.5rem] sm:text-[2rem]" />} />
+                </ProductBadge>
+            </div>
+            <div
+                className="flex flex-col w-1/2 p-2 bg-[#2B2116] rounded-[2.4vh] gap-3"
+            >
+                <div className="flex w-full justify-center items-center">
+                    <img
+                        className="rounded-[2vh]"
+                        src={gambar4}
+                        alt=""
+                    />
+                </div>
+                <ProductBadge>
+                    <ProductBadge.description title="Rating : 4.9 ⭐" desc="Indonesian Beans" />
+                    <ProductBadge.price price="235.00" icon={<CiShoppingBasket className="text-[1.5rem] sm:text-[2rem]" />} />
+                </ProductBadge>
             </div>
         </div>
     )
